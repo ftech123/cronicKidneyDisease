@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Add any custom styles here */
+        .about-section {
+            padding: 50px 0;
+            background-color: #f8f8f8;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .about-section h3 {
+            margin-bottom: 20px;
+        }
+        .about-section ul {
+            font-size: 18px;
+            padding-left: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content-container {
+            padding-bottom: 60px; /* Adjust this value to match the footer height */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo" style="font-size: 25px;">Chronic Disease</a>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <!-- Add more navigation items if needed -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Side Navigation (Mobile) -->
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <!-- Add more navigation items if needed -->
+    </ul>
+
+    <div class="content-container">
+        <!-- Home Page Image -->
+        <div class="container">
+            <img src="https://www.kidney.org/sites/default/files/stagesofckd_hero_mobile_v1.jpg" alt="Home Page Image" class="responsive-img">
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <div class="container">
+                <h3>About Chronic Kidney Disease (CKD)</h3>
+                <div id="messageContainer" style="text-align: center;"></div>
+                <ul>
+                    <li>A longstanding disease of the kidneys leading to renal failure.</li>
+                    <li>The kidneys filter waste and excess fluid from the blood. As kidneys fail, waste builds up.</li>
+                    <li>Symptoms develop slowly and aren't specific to the disease. Some people have no symptoms at all and are diagnosed by a lab test.</li>
+                    <li>Medication helps manage symptoms. In later stages, filtering the blood with a machine (dialysis) or a transplant may be required.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <!-- <div class="container">
+            <h2 class="center-align">Welcome to our website</h2>
+            <p>A longstanding disease of the kidneys leading to renal failure.
+                The kidneys filter waste and excess fluid from the blood. As kidneys fail, waste builds up.
+                Symptoms develop slowly and aren't specific to the disease. Some people have no symptoms at all and are diagnosed by a lab test.
+                Medication helps manage symptoms. In later stages, filtering the blood with a machine (dialysis) or a transplant may be required.
+            </p>
+        </div> -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            &copy; 2024 Chronic Kidney Disease Website
+        </div>
+    </footer>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // Initialize Side Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        nav {
+            background-color: #ee6e73; /* Set navigation bar background color */
+            padding: 10px 20px;
+        }
+
+        nav .brand-logo {
+            color: #fff; /* Set brand logo color */
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            float: right;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff; /* Set navigation link color */
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            text-align: center;
+            color: #333; /* Set heading color */
+        }
+
+        input[type="email"],
+        input[type="password"],
+        button {
+            display: block;
+            width: 80%;
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc; /* Set border color */
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #ee6e73; /* Set button background color */
+            color: #fff; /* Set button text color */
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ea2e35; /* Set button background color on hover */
+        }
+
+        @media screen and (max-width: 600px) {
+            nav ul {
+                display: none;
+            }
+
+            nav .brand-logo {
+                display: block;
+                margin: 0;
+                text-align: center;
+            }
+
+            nav .brand-logo a {
+                color: #fff;
+            }
+
+            .menu-toggle {
+                display: block;
+                color: #fff;
+                font-size: 24px;
+                float: right;
+                cursor: pointer;
+            }
+
+            .menu-toggle:hover {
+                color: #ccc;
+            }
+
+            nav.active ul {
+                display: block;
+                background-color:#ee6e73; /* Set background color of dropdown menu */
+                width: 100%;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            nav.active ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            nav.active ul li a {
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Chronic kidney disease</a>
+            <!-- <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul> -->
+        </div>
+    </nav>
+
+    <!-- Side Navigation (Mobile) -->
+    <!-- <ul class="sidenav" id="mobile-nav">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul> -->
+
+        <h2 class="center-align">Login</h2>
+        <div id="messageContainer" style="text-align: center;"></div>
+        <input id="email" type="email" class="validate" placeholder="email">
+        <input id="password" type="password" class="validate" placeholder="password">
+        <button  onclick="login()" >Login</button>
+        <h6 style="text-align: center;">New User: <a href="register.html">Click Here</a> | <a href="index.html">Home</a> </h6>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
